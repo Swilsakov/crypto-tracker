@@ -15,7 +15,9 @@ const CoinContainer = ({ coins, search }) => {
           name={coin.name}
           symbol={coin.symbol}
           price={coin.current_price}
-          volume={coin.market_cap} />
+          volume={coin.total_volume}
+          priceChange={coin.price_change_percentage_24h}
+          market_cap={coin.market_cap} />
       )
     })
   )

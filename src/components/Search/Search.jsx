@@ -1,4 +1,5 @@
 import React from 'react'
+import classes from './search.module.css'
 
 const Search = ({ setSearch }) => {
   const handleChange = e => {
@@ -6,10 +7,10 @@ const Search = ({ setSearch }) => {
   };
 
   return (
-    <div className='coin-search'>
-      <h1 className='coin-text'>Search a currency</h1>
+    <div className={classes.coin__search}>
+      <h1 className={classes.coin__text}>Search a currency</h1>
       <form>
-        <input type='text' placeholder='Search' className='coin-input' onChange={handleChange} />
+        <input type='text' placeholder='Search' className={classes.coin__input} onChange={handleChange} />
       </form>
     </div>
   )

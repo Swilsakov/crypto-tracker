@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import Search from './components/Search/Search'
-import CoinContainer from './components/Coin/CoinContainer'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import classes from './App.css'
+import Search from './components/Search/Search';
+import CoinContainer from './components/Coin/CoinContainer';
 
 const App = () => {
   const [coins, setCoins] = useState([]);
@@ -18,7 +19,7 @@ const App = () => {
 
   return (
     <div className='app-wrapper'>
-      <div className='coin-app'>
+      <div className={classes.coin__app}>
         <Search setSearch={setSearch} />
         <CoinContainer coins={coins} search={search} />
       </div>
